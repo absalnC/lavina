@@ -1,0 +1,19 @@
+.right{
+  text-align: right;
+}
+.left{
+  text-align: left;
+}
+.center{
+  text-align: center;
+}
+.custom-carousel{
+  max-height: 85vh;
+}
+.left{
+  min-width:54vw;
+}
+.container-carousel{
+  min-width:100%;
+  min-height:40vh;
+}
