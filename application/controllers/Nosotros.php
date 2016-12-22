@@ -24,8 +24,12 @@ class Nosotros extends CI_Controller {
 		$this->load->view('footer.php');
 	}
   public function valores(){
+		$data['head']='Nuestros valores';
     $this->load->helper('url');
-		$this->load->view('header.php');
+		$this->load->view('header.php',$data);
+		$this->load->view('vision.php');
+		$this->load->view('mision.php');
+		$this->load->view('creencias.php');
 		$this->load->view('footer.php');
   }
   public function historia(){

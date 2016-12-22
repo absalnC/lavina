@@ -4,34 +4,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta name="author" content="absalnc">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title><?php echo $head;?></title>
 	<link rel="stylesheet" href="
+		<?php echo base_url("font-awesome/css/font-awesome.min.css"); ?>" />
+	<link rel="stylesheet" href="
 		<?php echo base_url("css/bootstrap.min.css"); ?>" />
 		<link rel="stylesheet" href="
-			<?php echo base_url("css/own.css"); ?>" />
+			<?php echo base_url("css/own.css")."?r=".rand(1,1000); ?>" />
+		
 </head>
 <body>
 <!-- Fin de parte superior de la declaracion de documento-->
-
 <!-- Barra de navegacion-->
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only">Toggle </span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">La Vina Zacatecas</a>
+      <a class="navbar-brand" href="<?php echo site_url("/");
+				?>">La Vina Zacatecas</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Inicio <span class="sr-only">(current)
+        <li class="active"><a href="<?php echo site_url("/");
+					?>">Inicio <span class="sr-only">(current)
           </span></a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -70,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <li class="active"><a href="<?php
           echo site_url("eventos");
           ?>">Eventos <span class="sr-only">(current)
-          </span></a></lieueu>
+          </span></a></li>
 					<!--Idea: Dropdown con recursos como links a blogs relacionados
 						,otras vinas, podcast y transmision en vivo-->
 

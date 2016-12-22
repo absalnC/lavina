@@ -19,8 +19,9 @@ class NotReady extends CI_Controller {
 	 */
 	public function index()
 	{
+		$data['head']='En construccion';
 		$this->load->helper('url');
-		$this->load->view('header.php');
+		$this->load->view('header.php',$data);
 		$this->load->view('enProceso.php');
 		$this->load->view('footer.php');
 	}

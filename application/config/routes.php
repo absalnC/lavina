@@ -54,9 +54,7 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['(?i)ministerios($)|/(|centro|ctm|estudiantes|comedores|comunidades)']
   ='notReady';
-$route['(?i)nosotros($)|/(|valores|historia|equipo)']
+$route['(?i)nosotros($)|/(historia|equipo)']
     ='notReady';
 $route['(?i)eventos']
         ='notReady';
-$route['(?i)contacto']
-  ='notReady';
