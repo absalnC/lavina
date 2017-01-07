@@ -1,3 +1,7 @@
+*{
+    font-family: 'Oswald', sans-serif;
+}
+#super{width: 100vw;}
 .right{
   text-align: right;
 }
@@ -20,6 +24,94 @@
 .face-color{
   color: #3b5998;
 }
-.card{
-  height:100vh; 
+.card{min-height:40vh; }
+div [id^="card-"]{
+  opacity: 0;
+
+  padding: 1.5em;
+  margin: 2em 0 2em 0;
+  border-radius: 2em;
+  background-color: #f8f5f0;
+}
+.justified{
+  text-align: justify;
+}
+div[id^="ministerio-"]{
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#ministerio-centro{
+  background-image: url("../img/centro.jpg");
+  background-position: center;
+}
+#ministerio-ctm{
+  background-image: url("../img/ctm.jpg");
+}
+#ministerio-estudiantes{
+  background-image: url("../img/estudiantes.jpg");
+}
+#ministerio-comedores{
+  background-image: url("../img/8.jpg");
+}
+#ministerio-comunidades{
+  background-image: url("../img/basurero.jpg");
+}
+
+.wipe{
+  min-height:100vh;
+
+}
+.texto{
+  padding: 1.5em;
+  background: white;
+  color:navy;
+  font-size: 1.5em;
+  font-family: 'Oswald', sans-serif;
+  text-align: justify;
+}
+.wipe-texto{
+  margin:0;
+  padding:3em ;
+  color:white;/*snow,steelblue*/
+  font-size:6em;
+  /*font-family: Yanone Kaffeesatz,'sans-serif';*/
+  /*font-family: 'Baloo Thambi', cursive;*/
+  font-family: 'Oswald', sans-serif;
+  background-color: black;
+  opacity: .6;
+}
+.navy{
+  color:steelblue;
+}
+@media(max-width: 768px) {
+
+  .wipe-texto{
+    padding:0 ;
+    font-size: 3em;
+  }
+  .wipe{
+    border:solid white 1px;
+    padding-top:2.5em;
+    min-height:35vh;
+    width:100%;
+    margin:0;
+    background: white;
+    background-size: cover!important;
+  }
+}
+.people{
+  margin: 1em;
+  background-color: #f8f5f0;
+  border:solid  #f5f5f5 1px;
+}
+.nombre,.puesto{
+  margin: 1em 0 0 0;
+}
+.nombre{font-weight:700}
+.page{
+  min-height:100vh;
+  width:100%;
+}
+#semana{
+
 }

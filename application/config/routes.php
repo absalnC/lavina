@@ -52,9 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-$route['(?i)ministerios($)|/(|centro|ctm|estudiantes|comedores|comunidades)']
-  ='notReady';
-$route['(?i)nosotros($)|/(historia|equipo)']
+$route['(?i)nosotros($)|/(historia)']
     ='notReady';
 $route['(?i)eventos']
         ='notReady';

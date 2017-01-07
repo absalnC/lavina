@@ -38,8 +38,17 @@ class Nosotros extends CI_Controller {
 		$this->load->view('footer.php');
   }
   public function equipo(){
-    $this->load->helper('url');
-		$this->load->view('header.php');
+		$this->load->helper('url');
+		$pastor=array("puesto"=>"pastor","nombre"=>"lorem ipsum tilin",
+			"foto"=>base_url("img/anon.jpeg"));
+		$pastorNinos=array("puesto"=>"pastor de ninos",
+			"nombre"=>" tilin lorem ipsum","foto"=>base_url("img/anon.jpeg"));
+			$pastorAlabanza=array("puesto"=>"pastor de alabanza",
+				"nombre"=>" tilin lorem ipsum","foto"=>base_url("img/anon.jpeg"));
+		$data['people']=array($pastor,$pastorNinos,$pastorAlabanza);
+		$data['head']="Nuestro Equipo";
+		$this->load->view('header.php',$data);
+		$this->load->view('equipo.php',$data);
 		$this->load->view('footer.php');
   }
   public function ubicacion(){

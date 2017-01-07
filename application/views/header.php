@@ -9,13 +9,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title><?php echo $head;?></title>
-	<link rel="stylesheet" href="
-		<?php echo base_url("font-awesome/css/font-awesome.min.css"); ?>" />
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Thambi|Oswald|Yanone+Kaffeesatz" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="
 		<?php echo base_url("css/bootstrap.min.css"); ?>" />
 		<link rel="stylesheet" href="
 			<?php echo base_url("css/own.css")."?r=".rand(1,1000); ?>" />
-		
+				<link rel="stylesheet" href="
+					<?php echo base_url("css/style.css")."?r=".rand(1,1000); ?>" />
+					<script type="text/javascript" src="
+					<?php echo base_url("js/modernizr.js")?>"defer></script>
+			<script type="text/javascript" src="
+				<?php echo base_url("js/jquery.js"); ?>" defer></script>
+			<script type="text/javascript" src="
+			<?php echo base_url("js/jquery.swatchbook.js")?>"defer></script>
+
 </head>
 <body>
 <!-- Fin de parte superior de la declaracion de documento-->
@@ -55,23 +63,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </li>
         <!-- Fin de dropdown-->
 
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-          aria-expanded="false">Ministerios <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="<?php echo site_url("Ministerios/centro");
-            ?>">Centro</a></li>
-            <li><a href="<?php echo site_url("Ministerios/ctm");?>">
-              CTM</a></li>
-            <li><a href="<?php echo site_url("Ministerios/estudiantes");
-              ?>">Estudiantes</a></li>
-            <li><a href="<?php echo site_url("Ministerios/comedores");?>"
-              >Comedores</a></li>
-            <li><a href="<?php echo site_url("Ministerios/comunidades");?>"
-              >Comunidades</a></li>
-          </ul>
-        </li>
-        <!-- Fin de dropdown-->
+				<li class="active"><a href="<?php
+          echo site_url("ministerios");
+          ?>">Ministerios <span class="sr-only">(current)
+          </span></a></li>
         <li class="active"><a href="<?php
           echo site_url("eventos");
           ?>">Eventos <span class="sr-only">(current)
@@ -88,4 +83,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   </div>
 </nav>
 
-<div class="container-fluid">
+<div class="container-fluid" id="super">
