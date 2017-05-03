@@ -22,6 +22,8 @@ class Welcome extends CI_Controller {
 		$data=array('head'=>"La Vina Zacatecas, Bienvenido");
 		$this->load->helper('url');
 		$this->load->view('header.php',$data);
+		//si hay secion ir a index
+		//de lo contrario ir a login
 		$this->load->view('welcome_message');
 		$this->load->view('semana.php');
 		$this->load->view('footer.php');

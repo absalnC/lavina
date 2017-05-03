@@ -29,7 +29,8 @@ class Contacto extends CI_Controller {
 	}
 	public  function procesar(){
 		$this->load->helper('url');
-			if($this->postSet(array("nombre","email","phone","mensaje"))){
+		$this->load->library('util');		
+			if($this->util->areSetPost(array("nombre","email","phone","mensaje"))){
 				$nombre=$_POST['nombre'];
 				$this->load->database();
 				$data=array('mensaje'=>$_POST['mensaje'],'nombre'=>$_POST['nombre'],
@@ -52,11 +53,5 @@ class Contacto extends CI_Controller {
 			$this->load->view("footer");
 
 	}
-	private function postSet($varArray){
-		foreach ($varArray as  $value) {
-			if(!isset($_POST[$value]))
-				return false;
-		}
-		return true;
-	}
+	
 }
